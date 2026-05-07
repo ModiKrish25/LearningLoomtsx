@@ -18,7 +18,7 @@ a {
   text-decoration: none;
 }
 
-button, input, select {
+button, input, select, textarea {
   border: 0;
   font: inherit;
 }
@@ -113,11 +113,13 @@ button {
   color: #ffb703;
 }
 
-.nav button {
-  background: #7748c8;
+.nav button,
+.navButton {
+  /* background: #7748c8; */
   color: #fff;
-  padding: 20px 44px;
+  padding: 20px 12px;
   border-radius: 35px;
+  font-weight: 100;
 }
 
 .section {
@@ -451,7 +453,8 @@ form button,
 }
 
 input,
-select {
+select,
+textarea {
   height: 62px;
   border-radius: 999px;
   background: #f4f6fb;
@@ -459,8 +462,89 @@ select {
   color: #5f6070;
 }
 
+textarea {
+  height: auto;
+  border-radius: 26px;
+  padding: 22px 34px;
+  resize: vertical;
+}
+
 form button {
   height: 70px;
+}
+
+.contactPage {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  align-items: start;
+  padding: 90px 0 140px;
+}
+
+.contactIntro span,
+.errorPage span {
+  color: #e5447f;
+  display: inline-block;
+  font-weight: 900;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.contactIntro h1,
+.errorPage h1 {
+  margin-bottom: 28px;
+}
+
+.contactIntro p,
+.errorPage p {
+  max-width: 520px;
+}
+
+.contactForm {
+  background: #271052;
+  border-radius: 12px;
+  display: grid;
+  gap: 24px;
+  padding: 54px;
+}
+
+.contactForm label {
+  color: #fff;
+  display: grid;
+  font-weight: 800;
+  gap: 12px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contactForm button {
+  background: #ffb703;
+  color: #fff;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+.errorPage {
+  min-height: 560px;
+  padding: 110px 0;
+  text-align: center;
+}
+
+.errorPage p {
+  margin: 0 auto 36px;
+}
+
+.errorPage a {
+  background: #7748c8;
+  border-radius: 999px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 800;
+  padding: 20px 42px;
 }
 
 .help {
@@ -710,7 +794,8 @@ form button {
     font-size: 14px;
   }
 
-  .nav button {
+  .nav button,
+  .navButton {
     padding: 14px 24px;
   }
 
@@ -771,8 +856,19 @@ form button {
   .confidenceCard,
   .lessonCards,
   .bottomWhy,
-  .footerCta {
+  .footerCta,
+  .contactPage,
+  .formRow {
     grid-template-columns: 1fr;
+  }
+
+  .contactPage {
+    gap: 36px;
+    padding: 54px 0 80px;
+  }
+
+  .contactForm {
+    padding: 32px 24px;
   }
 
   .reportGrid {

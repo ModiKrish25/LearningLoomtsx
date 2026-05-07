@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 
-button, input, select {
+button, input, select, textarea {
   font: inherit;
   border: 0;
 }
@@ -131,11 +131,11 @@ button {
   color: #ffb703;
 }
 
-.nav button {
+.nav button, .navButton {
   color: #fff;
-  background: #7748c8;
   border-radius: 35px;
-  padding: 20px 44px;
+  padding: 20px 12px;
+  font-weight: 100;
 }
 
 .section {
@@ -490,7 +490,7 @@ p, li {
   display: grid;
 }
 
-input, select {
+input, select, textarea {
   color: #5f6070;
   background: #f4f6fb;
   border-radius: 999px;
@@ -498,8 +498,86 @@ input, select {
   padding: 0 34px;
 }
 
+textarea {
+  resize: vertical;
+  border-radius: 26px;
+  height: auto;
+  padding: 22px 34px;
+}
+
 form button {
   height: 70px;
+}
+
+.contactPage {
+  grid-template-columns: .85fr 1.15fr;
+  align-items: start;
+  gap: 80px;
+  padding: 90px 0 140px;
+  display: grid;
+}
+
+.contactIntro span, .errorPage span {
+  color: #e5447f;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.contactIntro h1, .errorPage h1 {
+  margin-bottom: 28px;
+}
+
+.contactIntro p, .errorPage p {
+  max-width: 520px;
+}
+
+.contactForm {
+  background: #271052;
+  border-radius: 12px;
+  gap: 24px;
+  padding: 54px;
+  display: grid;
+}
+
+.contactForm label {
+  color: #fff;
+  gap: 12px;
+  font-weight: 800;
+  display: grid;
+}
+
+.formRow {
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  display: grid;
+}
+
+.contactForm button {
+  color: #fff;
+  background: #ffb703;
+  border-radius: 999px;
+  margin-top: 8px;
+}
+
+.errorPage {
+  text-align: center;
+  min-height: 560px;
+  padding: 110px 0;
+}
+
+.errorPage p {
+  margin: 0 auto 36px;
+}
+
+.errorPage a {
+  color: #fff;
+  background: #7748c8;
+  border-radius: 999px;
+  padding: 20px 42px;
+  font-weight: 800;
+  display: inline-block;
 }
 
 .help {
@@ -747,7 +825,7 @@ form button {
     overflow-x: auto;
   }
 
-  .nav button {
+  .nav button, .navButton {
     padding: 14px 24px;
   }
 
@@ -799,8 +877,17 @@ form button {
     font-size: 25px;
   }
 
-  .reportGrid, .platform, .whyChoose, .demo, .confidenceCard, .lessonCards, .bottomWhy, .footerCta {
+  .reportGrid, .platform, .whyChoose, .demo, .confidenceCard, .lessonCards, .bottomWhy, .footerCta, .contactPage, .formRow {
     grid-template-columns: 1fr;
+  }
+
+  .contactPage {
+    gap: 36px;
+    padding: 54px 0 80px;
+  }
+
+  .contactForm {
+    padding: 32px 24px;
   }
 
   .reportGrid {
