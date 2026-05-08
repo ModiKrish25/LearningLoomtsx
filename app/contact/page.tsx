@@ -1,5 +1,5 @@
-import FooterCta from "./FooterCta";
-import Header from "./Header";
+import FooterCta from "../Component/FooterCta";
+import Header from "../Component/Header";
 
 export default function Contact() {
   return (
