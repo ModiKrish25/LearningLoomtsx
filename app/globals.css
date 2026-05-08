@@ -218,13 +218,39 @@ form button,
   font-size: 20px;
 }
 
-.brands {
+.brandsWrapper {
+  overflow: hidden;
   margin-top: 80px;
   margin-bottom: 100px;
+  width: 100%;
+}
+
+.brands {
   display: flex;
-  justify-content: space-between;
+  width: max-content;
   color: rgba(0, 0, 0, 0.25);
   font-size: 39px;
+  animation: scrollLeft 15s linear infinite;
+  will-change: transform;
+}
+
+.brands:hover {
+  animation-play-state: paused;
+}
+
+.brandGroup {
+  display: flex;
+  gap: 120px;
+  padding-right: 120px;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 .dot {
@@ -576,7 +602,7 @@ form button {
 }
 
 .timeline article.left {
-  margin-left: 0;
+  margin-left: -36px;
   text-align: right;
 }
 
