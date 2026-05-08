@@ -230,13 +230,40 @@ p, li {
   font-size: 20px;
 }
 
-.brands {
-  color: #00000040;
-  justify-content: space-between;
+.brandsWrapper {
+  width: 100%;
   margin-top: 80px;
   margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.brands {
+  color: #00000040;
+  will-change: transform;
+  width: max-content;
   font-size: 39px;
+  animation: 15s linear infinite scrollLeft;
   display: flex;
+}
+
+.brands:hover {
+  animation-play-state: paused;
+}
+
+.brandGroup {
+  gap: 120px;
+  padding-right: 120px;
+  display: flex;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 .dot {
@@ -610,7 +637,7 @@ form button {
 
 .timeline article.left {
   text-align: right;
-  margin-left: 0;
+  margin-left: -36px;
 }
 
 .timeline span {

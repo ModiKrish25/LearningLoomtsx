@@ -1,8 +1,6 @@
 import BottomWhy from "./Component/BottomWhy";
 import Confidence from "./Component/Confidence";
 import DemoForm from "./Component/DemoForm";
-import FooterCta from "./Component/FooterCta";
-import Header from "./Component/Header";
 import Help from "./Component/Help";
 import Hero from "./Component/Hero";
 import Platform from "./Component/Platform";
@@ -12,7 +10,6 @@ import WhyChoose from "./Component/WhyChoose";
 export default function Page() {
   return (
     <main>
-      <Header />
       <Hero />
       <Reporting />
       <Platform />
@@ -21,7 +18,6 @@ export default function Page() {
       <Help />
       <Confidence />
       <BottomWhy />
-      <FooterCta />
     </main>
   );
 }
